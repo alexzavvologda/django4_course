@@ -1,0 +1,16 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+Requires=gunicorn.socket
+[Service]
+User=root
+Group=root
+WorkingDirectory=/python_projects/django-rtk/
+#ExecStart=/python_projects/django-rtk/venv/bin/gunicorn --bind 0.0.0.0:8002 NewsStudyRostelecom.wsgi:application
+ExecStart=/python_projects/django-rtk/venv/bin/gunicorn --bind unix:/run/gunicorn.sock NewsStudyRostelecom.wsgi:application
+#ExecStart=/python_projects/django-rtk/env/bin/gunicorn --workers 3 --bind unix:/python_projects/django-rtk/gunicorn/gunicorn.sock /python_projects/django-rtk/NewsStudyRostelecom.wsgi:application --access-logfile /python_projects/django-rtk/gunicorn/access.log --error-logfile /python_projects/django-rtk/gunicorn/error.log
+#ExecStart=/python_projects/django-rtk/env/bin/gunicorn --workers 3 --bind unix:/python_projects/django-rtk/gunicorn/gunicorn.sock /python_projects/django-rtk/NewsStudyRostelecom.wsgi:application --access-logfile /python_projects/django-rtk/gunicorn/access.log --error-logfile /python_projects/django-rtk/gunicorn/error.log
+#ExecStart=/python_projects/django-rtk/env/bin/gunicorn --workers 3 --bind unix:/python_projects/django-rtk/gunicorn/gunicorn.sock config.wsgi:application --access-logfile /python_projects/django-rtk/gunicorn/access.log --error-logfile /python_projects/django-rtk/gunicorn/error.log
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
