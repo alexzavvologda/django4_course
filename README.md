@@ -14,7 +14,7 @@
 первый раз делал потратил порядка 4 часов.
 т.к. делал по разным инструкциям и поиску ошибок
 - сокет gunicorn.socket
-- сервис gunicorn.service
+- сервис gunicorn.service  
 - конфигурация nginx
 
  исходники в папке install_for_server
