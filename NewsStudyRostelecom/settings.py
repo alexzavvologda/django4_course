@@ -16,7 +16,7 @@ import environ
 env = environ.Env()
 #environ.Env.read_env()
 env.read_env()
-
+#proba
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # От дид
@@ -48,6 +48,8 @@ ALLOWED_HOSTS = ['178.69.64.68','178.69.64.68', 'help35.ru', 'www.help35.ru', '1
 
 
 # Application definition
+
+
 
 
 INSTALLED_APPS = [
