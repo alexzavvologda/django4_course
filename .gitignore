@@ -1,0 +1,6 @@
+.idea
+.git_*
+templ*
+nginx_*
+*.json
+NewsStudyRostelecom/.env
